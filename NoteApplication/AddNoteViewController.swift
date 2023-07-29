@@ -18,7 +18,7 @@ class AddNoteViewController: UIViewController {
         textField.layer.cornerRadius = 8
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 40))
         textField.leftViewMode = .always
-        textField.font = UIFont.systemFont(ofSize: 20)
+        textField.font = UIFont.systemFont(ofSize: 18)
         textField.placeholder = "Add title"
         return textField
         
@@ -95,7 +95,6 @@ class AddNoteViewController: UIViewController {
         noteTextField.translatesAutoresizingMaskIntoConstraints = false
         saveButton.translatesAutoresizingMaskIntoConstraints = false
         
-        // MARK: Title Text Field constraints
         NSLayoutConstraint.activate([
             titleTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
             titleTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -103,7 +102,6 @@ class AddNoteViewController: UIViewController {
             titleTextField.heightAnchor.constraint(equalToConstant: 40)
         ])
         
-        // MARK: Note Text Field constraints
         NSLayoutConstraint.activate([
             noteTextField.topAnchor.constraint(equalTo: titleTextField.bottomAnchor, constant: 10),
             noteTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -111,7 +109,6 @@ class AddNoteViewController: UIViewController {
             noteTextField.bottomAnchor.constraint(equalTo: saveButton.topAnchor, constant: -10)
         ])
         
-        // MARK: Save Button constraints
         NSLayoutConstraint.activate([
             saveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
